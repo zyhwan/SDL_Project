@@ -24,6 +24,8 @@ int SDL_main(int argc, char* argv[])
 	{
 		SDL_PollEvent(&MyEvent);
 
+		SDL_GetTicks64();
+
 		if (MyEvent.type == SDL_QUIT)
 		{
 			IsRunning = false;
