@@ -23,10 +23,6 @@ int SDL_main(int argc, char* argv[])
 	while (IsRunning)
 	{
 		SDL_PollEvent(&MyEvent);
-		if (MyEvent.key.keysym.sym == SDLK_ESCAPE)
-		{
-			IsRunning = false;
-		}
 
 		if (MyEvent.type == SDL_QUIT)
 		{
@@ -50,6 +46,10 @@ int SDL_main(int argc, char* argv[])
 			if (MyEvent.key.keysym.sym == SDLK_d)
 			{
 				PositionX += 10;
+			}
+			if (MyEvent.key.keysym.sym == SDLK_ESCAPE)
+			{
+				IsRunning = false;
 			}
 		}
 
